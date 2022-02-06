@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Primeiro Teste: Loop de Animação com Sprites</title>
+</head>
+<body>
+    <header class="title"><h1>Primeiro Teste: Loop de Animação com Sprites</h1></header>
+    <canvas id="canvas-animation" width="500" height="500"></canvas>
+    <script src="./animation.js"></script>
+    <script src="./bol.js"></script>
+    <script>
+        let canvas = document.querySelector('#canvas-animation')
+        let context = canvas.getContext('2d');
+
+        let b1 = new Bola(context);
+        b1.x = 100;
+        b1.y = 200;
+        b1.velocidadeX = 20;
+        b1.velocidadeY = -10;
+        b1.cor = 'red'
+        b1.raio = 20;
+
+        let b2 = new Bola(context);
+        b2.x = 200;
+        b2.y = 100;
+        b2.velocidadeX = -10;
+        b2.velocidadeY = 20;
+        b2.cor = 'lightgray'
+        b2.raio = 25;
+
+        let bolaZero3 = new Bola(context)
+        bolaZero3.x = 300;
+        bolaZero3.y = 150;
+        bolaZero3.velocidadeX = 10;
+        bolaZero3.velocidadeY = -10;
+        bolaZero3.cor = 'lightgreen'
+
+        let animation = new Animation(context);
+        
+
+        animation.novoSprite(b1);
+        animation.novoSprite(b2);
+        animation.novoSprite(bolaZero3);
+
+        animation.ligar();
+    </script>
+    
+
+</body>
+</html>

@@ -1,0 +1,24 @@
+<meta charset="utf-8">
+
+<script>
+    function Carro(cor, velocMaxima) {
+        // Criando os atributos
+        this.cor = cor;
+        this.velocMaxima = velocMaxima;
+        this.velocAtual = 0;
+        // Criando um método
+        this.acelerar = function () {
+            this.velocAtual += 10;
+        }
+    }
+
+    let meuCarro = new Carro('red', 300)
+    let oponente = new Carro('purple', 220)
+
+    meuCarro.acelerar()
+
+    console.log(meuCarro.velocAtual)
+    console.log(oponente.velocAtual)
+
+</script>
+<script src="carros.js"></script>
